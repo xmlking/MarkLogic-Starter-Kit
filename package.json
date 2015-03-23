@@ -1,0 +1,71 @@
+{
+  "name": "MarkLogic-Starter-Kit",
+  "version": "0.0.0",
+  "description": "MarkLogic Starter Project with AngularJS 2.0.",
+  "author": "Sumanth Chinthagunta",
+  "private": true,
+  "keywords": [
+    "MarkLogic Starter Kit",
+    "MarkLogic",
+    "AngularJS",
+    "systemjs",
+    "jspm",
+    "ES6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xmlking/marklogic-starter-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/xmlking/marklogic-starter-kit/issues"
+  },
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=0.12",
+    "npm": ">=2.0.0"
+  },
+  "scripts": {
+    "jshint": "gulp jshint",
+    "htmlhint": "gulp htmlhint",
+    "test": "gulp test:unit",
+    "outdated": "npm outdated --depth 0",
+    "build": "gulp build",
+    "deploy": "gulp gh-pages",
+    "postinstall": "jspm install"
+  },
+  "pre-commit": [
+    "jshint",
+    "htmlhint",
+    "test",
+    "outdated"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.4.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-ruby-sass": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-util": "^3.0.4",
+    "http-proxy": "^1.9.0",
+    "js-yaml": "^3.2.7",
+    "jspm": "^0.14.0",
+    "jspm-bower-endpoint": "^0.3.0",
+    "systemjs": "^0.15.0",
+    "traceur": "0.0.87",
+    "yargs": "^3.6.0"
+  },
+  "jspm": {
+    "directories": {
+      "lib": "src",
+      "packages": "jspm_packages"
+    },
+    "configFile": "jspm.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.0-build",
+      "angular-new-router": "npm:angular-new-router@^0.5.0",
+      "bourbon": "bower:bourbon@^4.2.1",
+      "rtts-assert": "npm:rtts-assert@^2.0.0-alpha"
+    }
+  }
+}
